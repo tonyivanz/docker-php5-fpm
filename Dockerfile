@@ -19,6 +19,8 @@ RUN sed -i -e 's/listen = \/var\/run\/php5-fpm.sock/listen = 9000/g' /etc/php5/f
 
 RUN mkdir -p /var/www
 
-EXPOSE 9000
 VOLUME /var/www
 ENTRYPOINT ["/usr/sbin/php5-fpm"]
+# Set the current working directory
+WORKDIR /var/www/html
+EXPOSE 9000
