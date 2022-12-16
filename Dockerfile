@@ -22,5 +22,5 @@ RUN mkdir -p /var/www
 VOLUME /var/www
 ENTRYPOINT ["/usr/sbin/php5-fpm"]
 # Set the current working directory
-WORKDIR /var/www/html
+WORKDIR /var/www
 EXPOSE 9000
